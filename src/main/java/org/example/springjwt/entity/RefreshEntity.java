@@ -10,16 +10,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class UserEntity {
-
+public class RefreshEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String username;
-
-    private String password;
-
-    private String role;
-
+    private String refresh;
+    private String expiration;
 }

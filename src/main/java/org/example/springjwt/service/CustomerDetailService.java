@@ -20,7 +20,7 @@ public class CustomerDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        UserEntity userData = userRepository.findByUserName(username);
+        UserEntity userData = userRepository.findByUsername(username);
 
         if(userData != null) {
             return new CustomerUserDetails(userData);
